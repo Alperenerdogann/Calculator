@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.2rem;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator-input {
+    width: 100%;
+    font-size: 4rem;
+    height: 70px;
+    border: none;
+    background-color: #252525;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #eaeaea;
+}
+
+.operator {
+    color: #337cac;
+    padding: 10px 0;
+}
+
+.clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #f17377;
+}
+
+.equal-sign, .minus {
+    background-color: #4e9ed4;
+    border-color: #337cac;
+    color: #fff;
+    grid-column: 4;
+    grid-row: 2 / span 4;
+    transform-origin: center; /* Dönüşüm orijinini merkez olarak ayarladık */
+}
+
+.equal-sign {
+    transform: rotate(0deg); /* Eşittir işaretini dikey yapmak için döndürdük */
+}
+
+.minus {
+    transform: rotate(180deg); /* Eksi işaretini yatay yapmak için döndürdük */
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    grid-gap: 10px;
+    padding: 20px;
+}
